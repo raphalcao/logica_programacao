@@ -1,7 +1,7 @@
 
 numeros = []
 resultado = []
-success = False
+confirma = False
 
 while True:
     array_numero = input('Digite um número ou aperte 0 para sair:')
@@ -13,16 +13,16 @@ while True:
         print('Digite um número válido.')
 
 alvo = 0
-alvo = input("Digite um número para localizar a soma específica:")
+alvo = input("Digite um número para ser resultado de soma:")
 
 while not alvo.isnumeric():
-    alvo = input("Digite um número. ")
+    alvo = input("Digite um número para ser resultado de soma: ")
 alvo = int(alvo)
 
 
 
 for n in numeros:
-    if success:
+    if confirma:
         break
 
 
@@ -33,10 +33,10 @@ for n in numeros:
         resultado.append(n + numeros[indexB])
 
         if alvo in resultado:
-            success = True
+            confirma = True
             print(indexA, indexB)
             break
         indexB += 1
 
-if not success:
+if not confirma:
     print('Não houve resultado!')
